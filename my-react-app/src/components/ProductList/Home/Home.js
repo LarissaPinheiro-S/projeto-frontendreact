@@ -1,4 +1,5 @@
 import ProductCard from "../ProductCard/ProductCard";
+import React from "react";
 
 function Home() {
     return (
