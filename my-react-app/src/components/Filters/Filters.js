@@ -2,7 +2,7 @@ import { FiltersDiv } from "./FiltersStyle";
 import { InputField, Container, Div} from "./FiltersStyle";
 import React from "react";
 
-function Filters({productList}) {
+function Filters() {
     return (
       <Div>
       <FiltersDiv>

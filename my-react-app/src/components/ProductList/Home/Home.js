@@ -1,23 +1,29 @@
 import ProductCard from "../ProductCard/ProductCard";
-import React from "react";
+import React, { useState } from "react";
 import { CardBox, Container, Header } from "./HomeStyle";
 
 
 function Home({productList}) {
+  const [ordination, setOrdination] = useState("");
+  
+  function handleSelect (event) {
+    setOrdination(event.target.value)
+  }
     return (
       <>
       <Container>
         <Header>
         <p>Quantidade de produtos:{productList.length}</p>
-        
         <label>Ordenação: 
-           <select>
-        <option value="">Ordenar</option>
-        <option value="">Crescente</option>
-        <option value="">Decrescente</option>
-      </select>
+          <select 
+            value={ordination}
+            onChange={handleSelect}
+            >
+            <option value="">Ordenar</option>
+            <option value="">Crescente</option>
+            <option value="">Decrescente</option>
+          </select>
         </label> 
-      
         </Header>
       
       <CardBox>

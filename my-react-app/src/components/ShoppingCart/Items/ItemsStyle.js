@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Div = styled.div`
   display: flex;
   flex-direction: column;
-  width: 18vw;
+  width: 80%;
   height: 50vh;
-  margin-left: 80%;
+  margin-left: 10%;
   border: 1px solid #000;
 `;
 
@@ -20,5 +20,6 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
   margin-bottom: 40%;
-  margin-top:5%
-`;
+  margin-top:25%
+`
+;
