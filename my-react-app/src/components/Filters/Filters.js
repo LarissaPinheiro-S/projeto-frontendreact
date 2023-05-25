@@ -2,7 +2,7 @@ import { FiltersDiv } from "./FiltersStyle";
 import { InputField, Container, Div} from "./FiltersStyle";
 import React from "react";
 
-function Filters() {
+function Filters({productList}) {
     return (
       <Div>
       <FiltersDiv>
@@ -25,16 +25,7 @@ function Filters() {
       </FiltersDiv>
 
       <Container>
-         <p>Quantidade de produtos: 9</p>
-
-        <div>
-        <label>Ordenação:</label> 
-       <select>
-        <option value="">Ordenar</option>
-        <option value="">Crescente</option>
-        <option value="">Decrescente</option>
-      </select>
-        </div>
+         
       </Container>
      </Div>
     );
