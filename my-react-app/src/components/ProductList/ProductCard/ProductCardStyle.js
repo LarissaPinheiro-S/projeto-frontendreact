@@ -15,7 +15,7 @@ export const ProductsCard= styled.figure`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 20%;
+    margin-left: 10%;
     width:20%;
     height: 40vh;
     border: 2px, solid, black;
@@ -29,7 +29,6 @@ export const Card= styled.figure`
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: pink
-  
 `
 export const Button = styled.button`
   width: 11vw;

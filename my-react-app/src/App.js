@@ -5,16 +5,19 @@ import Cart from './components/ShoppingCart/Cart/Cart';
 import {productList} from './assents/productsList';
 import { AppContainer } from './appStyle';
 import { GlobalStyle } from './globalStyle';
+import { useState } from 'react';
 
 function App() {
+const [cart, setCart] = useState ("");
+const [amount, setAmount] = useState("");
+const [minFilter, SetMinFilter] = useState("");
+const [maxFilter, setMaxFilter] = useState("");
+const [searchFilter, setSearchFilter] = useState("");
 
-
-console.log(productList)
   return (
-    
     <AppContainer>
       <GlobalStyle />
-      <Filters productList = {productList}/>
+      <Filters/>
       <Home productList = {productList}/>
       <Cart/>
     </AppContainer>

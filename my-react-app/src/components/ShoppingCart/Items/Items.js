@@ -4,7 +4,7 @@ import { Div, Button, Section} from "./ItemsStyle";
 function Items() {
     return (
       <Div>
-      <h1>Carrinho</h1>
+      <h1>Carro</h1>
       <Section>
         <p>Produto:</p>
        <Button>remover</Button>
