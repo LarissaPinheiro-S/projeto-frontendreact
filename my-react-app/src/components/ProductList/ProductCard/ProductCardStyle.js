@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const ImgField = styled.img`
-  width: 18vw;
-  height: 17vw;
-  margin: 10px;
+export const Imagem = styled.img`
+  width: 100%;
+  max-height: 70%;
 `;
 
 export const HeaderField = styled.header`
@@ -16,23 +15,26 @@ export const ProductsCard= styled.figure`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    width:65vw;
-    height: 0vh;
-    margin-left: 15%;
-    background-color: red;
+    margin-left: 20%;
+    width:20%;
+    height: 40vh;
+    border: 2px, solid, black;
+
 `
 export const Card= styled.figure`
     display: flex;
     flex-direction: column;
-    width:20vw;
-    align-items: center;
+    height: 30%;
+    width:30vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: pink
   
 `
 export const Button = styled.button`
   width: 11vw;
   height: 4vh;
-  margin-top: 4%;
+  margin: 4%;
   background-color: aquamarine;
   border-radius: 5px;
   border: none;

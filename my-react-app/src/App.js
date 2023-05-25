@@ -2,25 +2,22 @@ import './App.css';
 import Filters from './components/Filters/Filters';
 import Home from './components/ProductList/Home/Home';
 import Cart from './components/ShoppingCart/Cart/Cart';
-import { createGlobalStyle } from 'styled-components'
+import {productList} from './assents/productsList';
+import { AppContainer } from './appStyle';
+import { GlobalStyle } from './globalStyle';
 
 function App() {
 
-  const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-`
+
+console.log(productList)
   return (
-    <div className="App">
+    
+    <AppContainer>
       <GlobalStyle />
-      <Filters/>
-      <Home/>
+      <Filters productList = {productList}/>
+      <Home productList = {productList}/>
       <Cart/>
-    </div>
+    </AppContainer>
   );
 }
-
 export default App;
