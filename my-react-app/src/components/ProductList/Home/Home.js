@@ -3,7 +3,14 @@ import React, { useState } from "react";
 import { CardBox, Container, Header } from "./HomeStyle";
 
 
-function Home({productList}) {
+function Home({
+  productList,
+  amount,
+  setAmount,
+  cart,
+  setCart
+}) {
+  
   const [ordination, setOrdination] = useState("");
   
   function handleSelect (event) {

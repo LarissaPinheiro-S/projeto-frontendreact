@@ -1,32 +1,72 @@
 import { FiltersDiv } from "./FiltersStyle";
-import { InputField, Container, Div} from "./FiltersStyle";
+import { InputField, Div} from "./FiltersStyle";
 import React from "react";
 
-function Filters() {
+function Filters({
+  minFilter, 
+  setMinFilter,
+  maxFilter, 
+  setMaxFilter,
+  searchFilter, 
+  setSearchFilter,
+}) {
+  function handleMinFilter(event) {
+    if(event.target.value < 0) {
+      alert("Digite um valor positivo")
+      setMinFilter(0)
+    }else{
+      setMinFilter(event.target.value)
+    }
+    
+  }
+
+  function handleMaxFilter(event) {
+    if(event.target.value < 0) {
+      alert("Digite um valor positivo")
+      setMaxFilter(0)
+    }else{
+      setMaxFilter(event.target.value)
+    }
+  }
+
+  function handleSearchFilter(event) {
+    setSearchFilter(event.target.value)
+  }
+  console.log(searchFilter)
     return (
       <Div>
       <FiltersDiv>
-       <h1>Filtro</h1>
-      <label>Valor mínimo:</label>
-      <InputField
+       <h2>Filtro</h2>
+      <label>
+        Valor mínimo:
+      <input
         type="number"
-        placeholder="Valor mínimo" 
+        placeholder="Valor mínimo"
+        value={minFilter}
+        onChange={handleMinFilter}
       />
-      <label>Valor máximo:</label>
-      <InputField
+      </label>
+
+      <label>
+        Valor máximo:
+      <input
         type="number"
         placeholder="Valor máximo"
+        value={maxFilter}
+        onChange={handleMaxFilter}
       />
-        <label>Busca por nome:</label>
-      <InputField
-        type="text"
-        placeholder="Busca por nome"
-      />
-      </FiltersDiv>
+      </label>
 
-      <Container>
-         
-      </Container>
+      <label>
+          Busca por nome:
+        <input
+          type="text"
+          placeholder="Busca por nome"
+          value ={searchFilter}
+          onChange={handleSearchFilter}
+      />
+      </label>
+      </FiltersDiv>
      </Div>
     );
   }

@@ -2,7 +2,7 @@ import React from "react";
 import {ProductsCard, Card, Button, Imagem} from "./ProductCardStyle";
 
 function ProductCard({productList}) {
-  console.log("recebendo as props",productList);
+  
     return (
       <ProductsCard>
         <Imagem src={productList.imageUrl}/>
