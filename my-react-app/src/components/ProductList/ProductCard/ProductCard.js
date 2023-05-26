@@ -1,7 +1,7 @@
 import React from "react";
 import {ProductsCard, Card, Button, Imagem} from "./ProductCardStyle";
 
-function ProductCard({productList}) {
+function ProductCard({productList, addToCart}) {
   
     return (
       <ProductsCard>
@@ -9,7 +9,7 @@ function ProductCard({productList}) {
          <Card>
         <p>{productList.name}</p>
         <value>{productList.value}</value>
-        <Button>Adicionar ao carrinho</Button>
+        <Button onClick={() => addToCart(productList)}>Adicionar ao carrinho</Button>
         </Card> 
       </ProductsCard>
     );

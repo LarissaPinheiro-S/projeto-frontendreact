@@ -1,17 +1,24 @@
 import React from "react";
-import { Div, Button, Section} from "./ItemsStyle";
+import {Button, CartContainer} from "./ItemsStyle";
 
-function Items() {
+function Items({
+  nome, 
+  valor, 
+  quantidade, 
+  id, 
+  removeItem}) {
+
     return (
-      <Div>
-      <h1>Carro</h1>
-      <Section>
-        <p>Produto:</p>
-       <Button>remover</Button>
-      </Section>
-       <p>Valor total: 0</p>
-      </Div>
+      <div>
+       
+        <h3>{nome}</h3>
+       <CartContainer>
+        <p>Valor: {valor}</p>
+        <p>Quantidade: {quantidade}</p>
+       <Button onClick={() => removeItem(id)}>Remover</Button>
+      </CartContainer>
+       
+      </div>
     );
   }
-  
   export default Items;

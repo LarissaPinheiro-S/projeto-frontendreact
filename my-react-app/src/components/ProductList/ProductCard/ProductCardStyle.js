@@ -5,20 +5,15 @@ export const Imagem = styled.img`
   max-height: 70%;
 `;
 
-export const HeaderField = styled.header`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-`
-
 export const ProductsCard= styled.figure`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 10%;
-    width:20%;
-    height: 40vh;
+    margin: 2%;
+    width:25%;
+    height: 42vh;
     border: 2px, solid, black;
+    
 
 `
 export const Card= styled.figure`
@@ -28,7 +23,8 @@ export const Card= styled.figure`
     width:30vw;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: pink
+    background-color: pink;
+    border-radius: 3%;
 `
 export const Button = styled.button`
   width: 11vw;
@@ -36,5 +32,4 @@ export const Button = styled.button`
   margin: 4%;
   background-color: aquamarine;
   border-radius: 5px;
-  border: none;
 `;

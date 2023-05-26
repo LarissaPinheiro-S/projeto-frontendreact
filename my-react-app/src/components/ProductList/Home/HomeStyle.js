@@ -1,9 +1,10 @@
 import { styled } from "styled-components";
 
 export const CardBox = styled.div`
-    background-color: black;
+    background-color: salmon;
     display: flex;
     flex-wrap: wrap;
+    width: 60vw;
 `
 export const Container = styled.div`
     display: flex;
