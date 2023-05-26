@@ -10,16 +10,34 @@ import { useState } from 'react';
 function App() {
 const [cart, setCart] = useState ("");
 const [amount, setAmount] = useState("");
-const [minFilter, SetMinFilter] = useState("");
-const [maxFilter, setMaxFilter] = useState("");
+const [minFilter, SetMinFilter] = useState(0);
+const [maxFilter, setMaxFilter] = useState(0);
 const [searchFilter, setSearchFilter] = useState("");
 
   return (
     <AppContainer>
       <GlobalStyle />
-      <Filters/>
-      <Home productList = {productList}/>
-      <Cart/>
+      <Filters 
+      minFilter={minFilter} 
+      setMinFilter = {SetMinFilter}
+      maxFilter = {maxFilter}
+      setMaxFilter = {setMaxFilter}
+      searchFilter = {searchFilter}
+      setSearchFilter = {setSearchFilter}
+      />
+      <Home 
+      productList = {productList}
+      amount = {amount}
+      setAmount = {setAmount}
+      cart = {cart}
+      setCart = {setCart}
+      />
+      <Cart
+      amount = {amount}
+      setAmount = {setAmount}
+      cart = {cart}
+      setCart = {setCart}
+      />
     </AppContainer>
   );
 }
