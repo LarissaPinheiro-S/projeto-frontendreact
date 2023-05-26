@@ -16,6 +16,30 @@ function Home({
   function handleSelect (event) {
     setOrdination(event.target.value)
   }
+
+  function addToCart(product) {
+    
+    const newProduct = cart.find(
+      (produtoCallBack) => product.id === produtoCallBack.id
+    )
+    if (newProduct === undefined) {
+      product = {...product, quantidade: 1}
+      setCart([...cart, product])
+      const totalValue = amount + product.value
+      setAmount(totalValue)
+    } else {
+      const newCart = cart.map((produto) => {
+        if(produto.id === newProduct.id) {
+          const totalValue = amount + product.value
+          setAmount(totalValue)
+          return {...newProduct, quantidade: newProduct.quantidade+1}
+        }else{
+          return produto
+        }
+      })
+      setCart(newCart)
+    }
+  }console.log("valor total", amount)
     return (
       <>
       <Container>
@@ -34,9 +58,15 @@ function Home({
         </Header>
       
       <CardBox>
-     <ProductCard productList={productList[0]}/>
-     <ProductCard productList={productList[1]}/>
-     <ProductCard productList={productList[2]}/>
+        { productList.map((product) => {
+          return (
+            <ProductCard 
+              productList={product} 
+              key={product.id}
+              addToCart={addToCart}
+            />
+          )
+        })}
       </CardBox>
       </Container>
       </>

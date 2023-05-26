@@ -39,7 +39,7 @@ function Filters({
        <h2>Filtro</h2>
       <label>
         Valor mínimo:
-      <input
+      <InputField
         type="number"
         placeholder="Valor mínimo"
         value={minFilter}
@@ -49,7 +49,7 @@ function Filters({
 
       <label>
         Valor máximo:
-      <input
+      <InputField
         type="number"
         placeholder="Valor máximo"
         value={maxFilter}
@@ -59,7 +59,7 @@ function Filters({
 
       <label>
           Busca por nome:
-        <input
+        <InputField
           type="text"
           placeholder="Busca por nome"
           value ={searchFilter}

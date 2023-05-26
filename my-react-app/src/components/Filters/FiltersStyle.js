@@ -5,14 +5,18 @@ export const FiltersDiv = styled.div`
   flex-direction: column;
   border: 1px solid #000;
   width: 19vw;
-  height: 50vh;
-  padding-left: 10px;
-  align-items:start;
+  height: 100vh;
+  padding: 20px;
+  align-items:center;
   background-color: gray;
 `;
 
 export const InputField = styled.input`
   margin: 10px;
+  height: 50%;
+  max-width: 15vw;
+  height: 5vh;
+  border-radius: 4px;
 `;
 
 export const Container = styled.div`
