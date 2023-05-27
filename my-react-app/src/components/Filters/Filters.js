@@ -1,3 +1,5 @@
+import { productList } from "../../assents/productsList";
+import ProductCard from "../ProductList/ProductCard/ProductCard";
 import { FiltersDiv } from "./FiltersStyle";
 import { InputField, Div} from "./FiltersStyle";
 import React from "react";
@@ -12,17 +14,16 @@ function Filters({
 }) {
   function handleMinFilter(event) {
     if(event.target.value < 0) {
-      alert("Digite um valor positivo")
+      alert("Não pagamos para vender")
       setMinFilter(0)
     }else{
       setMinFilter(event.target.value)
     }
-    
   }
 
   function handleMaxFilter(event) {
     if(event.target.value < 0) {
-      alert("Digite um valor positivo")
+      alert("Não pagamos para vender")
       setMaxFilter(0)
     }else{
       setMaxFilter(event.target.value)
@@ -32,8 +33,9 @@ function Filters({
   function handleSearchFilter(event) {
     setSearchFilter(event.target.value)
   }
-  console.log(searchFilter)
+
     return (
+      
       <Div>
       <FiltersDiv>
        <h2>Filtro</h2>

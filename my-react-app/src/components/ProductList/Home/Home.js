@@ -1,6 +1,6 @@
 import ProductCard from "../ProductCard/ProductCard";
 import React, { useState } from "react";
-import { CardBox, Container, Header } from "./HomeStyle";
+import { CardBox, Container, Header, HeaderSection } from "./HomeStyle";
 
 
 function Home({
@@ -43,6 +43,7 @@ function Home({
     return (
       <>
       <Container>
+        <HeaderSection>Escolha seu satélite</HeaderSection>
         <Header>
         <p>Quantidade de produtos:{productList.length}</p>
         <label>Ordenação: 

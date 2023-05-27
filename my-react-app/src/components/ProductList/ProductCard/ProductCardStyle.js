@@ -9,10 +9,9 @@ export const ProductsCard= styled.figure`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2%;
+    margin: 3%;
     width:25%;
-    height: 42vh;
-    border: 2px, solid, black;
+    height: 40vh;
     
 
 `
@@ -23,7 +22,7 @@ export const Card= styled.figure`
     width:30vw;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: pink;
+    background-color: white;
     border-radius: 3%;
 `
 export const Button = styled.button`

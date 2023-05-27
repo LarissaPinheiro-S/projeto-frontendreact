@@ -5,10 +5,10 @@ export const FiltersDiv = styled.div`
   flex-direction: column;
   border: 1px solid #000;
   width: 19vw;
-  height: 100vh;
+  height: 109vh;
   padding: 20px;
   align-items:center;
-  background-color: gray;
+  background-color: aliceblue;
 `;
 
 export const InputField = styled.input`

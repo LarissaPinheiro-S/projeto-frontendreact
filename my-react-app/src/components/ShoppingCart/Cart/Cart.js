@@ -1,6 +1,6 @@
 import Items from "../Items/Items";
 import React from "react";
-import { Div, Section } from "./CartStyle";
+import { Div, Section} from "./CartStyle";
 
 function Cart({amount,setAmount,cart,setCart}) {
 
@@ -21,7 +21,7 @@ function removeItem(id) {
 }
     return (
       <Div>
-        <h1>Carrinho</h1>
+        <h2>Carrinho</h2>
         <Section>
           {cart.map((product) => {
           return (
@@ -35,7 +35,7 @@ function removeItem(id) {
             />
           )
         })}
-        <p>Valor total: R$ {amount.toFixed(2)}</p>
+        <p>VALOR TOTAL: R$ {amount.toFixed(2)}</p>
         </Section>
       </Div>
     );
