@@ -11,13 +11,13 @@ function Items({
     return (
       <div>
        
-        <h3>{nome}</h3>
+        <h4>{nome}</h4>
        <CartContainer>
         <p>Valor: {valor}</p>
         <p>Quantidade: {quantidade}</p>
-       <Button onClick={() => removeItem(id)}>Remover</Button>
-      </CartContainer>
        
+      </CartContainer>
+       <Button onClick={() => removeItem(id)}>Remover</Button>
       </div>
     );
   }

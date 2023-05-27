@@ -2,5 +2,6 @@ import { styled } from "styled-components";
 
 export const AppContainer = styled.div `
     display: flex;
-    background-color: aliceblue;
+    background-color: rgb(255, 215, 129);
+
 `
